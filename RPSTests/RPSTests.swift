@@ -19,6 +19,7 @@ class RPSTests: XCTestCase {
     }
     
     func testRockResult() {
+        
         let sign = Sign.rock
         print(sign)
         print(sign.emoji)

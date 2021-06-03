@@ -23,40 +23,10 @@ func randomSign() -> Sign {
     }
 }
 
+
+
 enum Sign {
     case rock, paper, scissors
-    
-    func getResult(for oposite: Sign) -> GameState {
-        switch self {
-        case .rock:
-            switch oposite {
-            case .rock:
-                return .draw
-            case .paper:
-                return .lose
-            case .scissors:
-                return .win
-            }
-        case .paper:
-            switch oposite {
-            case .rock:
-                return .win
-            case .paper:
-                return .draw
-            case .scissors:
-                return .lose
-            }
-        case .scissors:
-            switch oposite {
-            case .rock:
-                return .lose
-            case .paper:
-                return .win
-            case .scissors:
-                return .draw
-            }
-        }
-    }
     
     var emoji: String {
         switch self {
@@ -69,4 +39,53 @@ enum Sign {
         }
     }
     
+    func getResult(for oposite: Sign) -> GameState {
+        
+        switch (self, oposite) {
+        case (.rock, .rock),
+             (.paper, .paper),
+             (.scissors, .scissors):
+            return .draw
+        case (.rock, .scissors),
+             (.paper, .rock),
+             (.scissors, .paper):
+            return .win
+        default:
+            return .lose
+        }
+        
+//        switch self {
+//        case .rock:
+//            switch oposite {
+//            case .rock:
+//                return .draw
+//            case .paper:
+//                return .lose
+//            case .scissors:
+//                return .win
+//            }
+//        case .paper:
+//            switch oposite {
+//            case .rock:
+//                return .win
+//            case .paper:
+//                return .draw
+//            case .scissors:
+//                return .lose
+//            }
+//        case .scissors:
+//            switch oposite {
+//            case .rock:
+//                return .lose
+//            case .paper:
+//                return .win
+//            case .scissors:
+//                return .draw
+//            }
+//        }
+//    }
+//
+
+    
+    }
 }
