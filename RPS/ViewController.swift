@@ -77,6 +77,7 @@ class ViewController: UIViewController {
         resetButton.isHidden = true
         self.view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
         statusLabel.text = "Rock, Paper, Scissors?"
+        robotButton.setTitle("👾", for: .normal)
     }
     
     
