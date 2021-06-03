@@ -22,6 +22,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var resetButton: UIButton!
     
+    
+    override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
+        if event?.subtype == UIEvent.EventSubtype.motionShake {
+            reset()
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         resetButton.isHidden = true
@@ -67,7 +74,9 @@ class ViewController: UIViewController {
         rockButton.isHidden = false
         paperButton.isHidden = false
         scissorsButton.isHidden = false
-        resetButton.isHidden = false
+        resetButton.isHidden = true
+        self.view.backgroundColor = #colorLiteral(red: 1, green: 1, blue: 1, alpha: 1)
+        statusLabel.text = "Rock, Paper, Scissors?"
     }
     
     
