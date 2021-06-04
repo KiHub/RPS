@@ -9,7 +9,7 @@ import UIKit
 
 class ViewController: UIViewController {
     
-  
+    
     @IBOutlet weak var robotButton: UIButton!
     
     @IBOutlet weak var statusLabel: UILabel!
@@ -42,7 +42,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         resetButton.isHidden = true
     }
-
+    
     func play(_ sign: Sign) {
         let computerSign = randomSign()
         robotButton.setTitle(computerSign.emoji, for: .normal)
@@ -84,7 +84,7 @@ class ViewController: UIViewController {
         case .start:
             reset()
         }
-
+        
     }
     func reset() {
         rockButton.isHidden = false
@@ -98,7 +98,7 @@ class ViewController: UIViewController {
     
     
     // MARK: - IBAction
-
+    
     
     
     @IBAction func rockButtonPressed(_ sender: Any) {
@@ -113,6 +113,13 @@ class ViewController: UIViewController {
     }
     @IBAction func resetButtonPressed(_ sender: Any) {
         reset()
+    }
+    
+    @IBAction func robotButtonPressed(_ sender: UIButton) {
+        valueLeft = 0
+        valueRight = 0
+        counterLabel.text = "\(valueLeft):\(valueRight)"
+        
     }
     
 }

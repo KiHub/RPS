@@ -54,38 +54,38 @@ enum Sign {
             return .lose
         }
         
-//        switch self {
-//        case .rock:
-//            switch oposite {
-//            case .rock:
-//                return .draw
-//            case .paper:
-//                return .lose
-//            case .scissors:
-//                return .win
-//            }
-//        case .paper:
-//            switch oposite {
-//            case .rock:
-//                return .win
-//            case .paper:
-//                return .draw
-//            case .scissors:
-//                return .lose
-//            }
-//        case .scissors:
-//            switch oposite {
-//            case .rock:
-//                return .lose
-//            case .paper:
-//                return .win
-//            case .scissors:
-//                return .draw
-//            }
-//        }
-//    }
-//
-
-    
+        //        switch self {
+        //        case .rock:
+        //            switch oposite {
+        //            case .rock:
+        //                return .draw
+        //            case .paper:
+        //                return .lose
+        //            case .scissors:
+        //                return .win
+        //            }
+        //        case .paper:
+        //            switch oposite {
+        //            case .rock:
+        //                return .win
+        //            case .paper:
+        //                return .draw
+        //            case .scissors:
+        //                return .lose
+        //            }
+        //        case .scissors:
+        //            switch oposite {
+        //            case .rock:
+        //                return .lose
+        //            case .paper:
+        //                return .win
+        //            case .scissors:
+        //                return .draw
+        //            }
+        //        }
+        //    }
+        //
+        
+        
     }
 }

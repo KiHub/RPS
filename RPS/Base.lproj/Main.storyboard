@@ -24,6 +24,9 @@
                                         <rect key="frame" x="106" y="0.0" width="136" height="163"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="126"/>
                                         <state key="normal" title="👾"/>
+                                        <connections>
+                                            <action selector="robotButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aVi-1J-PBG"/>
+                                        </connections>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rock, Paper, Scissors?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ck-r2-q99" userLabel="Status Label">
                                         <rect key="frame" x="34" y="165" width="280" height="32.333333333333343"/>
