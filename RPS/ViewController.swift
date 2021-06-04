@@ -22,12 +22,21 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var resetButton: UIButton!
     
+    @IBOutlet weak var counterLabel: UILabel!
     
     override func motionEnded(_ motion: UIEvent.EventSubtype, with event: UIEvent?) {
         if event?.subtype == UIEvent.EventSubtype.motionShake {
             reset()
+            valueLeft = 0
+            valueRight = 0
+            counterLabel.text = "\(valueLeft):\(valueRight)"
         }
     }
+    
+    var valueLeft = 0
+    var valueRight = 0
+    
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -59,12 +68,19 @@ class ViewController: UIViewController {
         case .win:
             statusLabel.text = "Win"
             self.view.backgroundColor = #colorLiteral(red: 0.8196078431, green: 0.9176470588, blue: 0.6392156863, alpha: 1)
+            valueLeft += 1
+            counterLabel.text = "\(valueLeft):\(valueRight)"
         case .lose:
             statusLabel.text = "Lose"
             self.view.backgroundColor = #colorLiteral(red: 0.9176470588, green: 0.5647058824, blue: 0.4784313725, alpha: 1)
+            valueRight += 1
+            counterLabel.text = "\(valueLeft):\(valueRight)"
+            
         case .draw:
             statusLabel.text = "="
             self.view.backgroundColor = #colorLiteral(red: 0.9843137255, green: 0.7764705882, blue: 0.5294117647, alpha: 1)
+            counterLabel.text = "\(valueLeft):\(valueRight)"
+            
         case .start:
             reset()
         }

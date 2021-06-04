@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
-    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <device id="retina6_5" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
@@ -17,8 +17,8 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="48" translatesAutoresizingMaskIntoConstraints="NO" id="LiK-JC-CzX">
-                                <rect key="frame" x="33" y="238" width="348" height="420.5"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="2" translatesAutoresizingMaskIntoConstraints="NO" id="LiK-JC-CzX">
+                                <rect key="frame" x="33" y="284" width="348" height="328.33333333333326"/>
                                 <subviews>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aOp-JF-WUu" userLabel="RobotButton">
                                         <rect key="frame" x="106" y="0.0" width="136" height="163"/>
@@ -26,13 +26,13 @@
                                         <state key="normal" title="👾"/>
                                     </button>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Rock, Paper, Scissors?" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7Ck-r2-q99" userLabel="Status Label">
-                                        <rect key="frame" x="34" y="211" width="280" height="32.5"/>
+                                        <rect key="frame" x="34" y="165" width="280" height="32.333333333333343"/>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="27"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <stackView opaque="NO" contentMode="scaleToFill" spacing="15" translatesAutoresizingMaskIntoConstraints="NO" id="qs3-nQ-wKd">
-                                        <rect key="frame" x="0.0" y="291.5" width="348" height="129"/>
+                                        <rect key="frame" x="0.0" y="199.33333333333331" width="348" height="129"/>
                                         <subviews>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="j5T-EH-Kk0" userLabel="Rock Button">
                                                 <rect key="frame" x="0.0" y="0.0" width="106" height="129"/>
@@ -63,7 +63,7 @@
                                 </subviews>
                             </stackView>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="B8U-Z7-iap">
-                                <rect key="frame" x="126" y="666" width="162" height="52"/>
+                                <rect key="frame" x="126" y="619.66666666666663" width="162" height="52"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
                                 <state key="normal" title="Play Again">
                                     <color key="titleColor" systemColor="labelColor"/>
@@ -72,17 +72,26 @@
                                     <action selector="resetButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="q5T-gL-6E4"/>
                                 </connections>
                             </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0 : 0" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6cz-4v-GZF" userLabel="CounterLabel">
+                                <rect key="frame" x="161.33333333333334" y="221" width="91.666666666666657" height="55"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="46"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
+                            <constraint firstItem="6cz-4v-GZF" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="G8y-Wj-8Fy"/>
                             <constraint firstItem="B8U-Z7-iap" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="VN8-TT-CxK"/>
+                            <constraint firstItem="LiK-JC-CzX" firstAttribute="top" secondItem="6cz-4v-GZF" secondAttribute="bottom" constant="8" id="lts-sE-LC8"/>
                             <constraint firstItem="LiK-JC-CzX" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="rhj-z1-ZgF"/>
                             <constraint firstItem="LiK-JC-CzX" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="t36-rN-Ljb"/>
                             <constraint firstItem="B8U-Z7-iap" firstAttribute="top" secondItem="LiK-JC-CzX" secondAttribute="bottom" constant="7.5" id="wvs-Ie-LkH"/>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="counterLabel" destination="6cz-4v-GZF" id="QYO-Bo-u57"/>
                         <outlet property="paperButton" destination="U0V-kK-DYK" id="1dq-m1-5Y5"/>
                         <outlet property="resetButton" destination="B8U-Z7-iap" id="VPz-I7-bZV"/>
                         <outlet property="robotButton" destination="aOp-JF-WUu" id="MNZ-5o-Kol"/>
